@@ -50,6 +50,20 @@ $config = [
             'rules' => [
             ],
         ],
+
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'myserver' => [
+                    'class' => 'yii\authclient\OAuth2',
+                    'clientId' => 'myserver_client_id',
+                    'clientSecret' => 'fbffefb5b8dfe14608ea6d67b3352a45d227d46a5ceb457fb8b0f95b43fdcc84',
+                    'tokenUrl' => 'http://myserver.local/auth/token',
+                    'authUrl' => 'http://myserver.local/auth/index',
+                    'apiBaseUrl' => 'http://myserver.local/api',
+                ],
+            ],
+        ],
         
     ],
     'params' => $params,
