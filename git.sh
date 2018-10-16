@@ -1,7 +1,7 @@
 #!/bin/bash
 git add .
 
-git commit -am 'update controller auth'
+git commit -am 'update auth'
 
 git pull origin master
 

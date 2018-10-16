@@ -18,10 +18,10 @@ class AuthController extends Controller
              * AuthorizeFilter uses session to store incoming oauth2 request, so 
              * you can do additional steps, such as third party oauth authorization (Facebook, Google ...)  
              */
-            'oauth2Auth' => [
-                'class' => \conquer\oauth2\AuthorizeFilter::className(),
-                'only' => ['index'],
-            ],
+            // 'oauth2Auth' => [
+            //     'class' => \conquer\oauth2\AuthorizeFilter::className(),
+            //     'only' => ['index'],
+            // ],
         ];
     }
     
@@ -51,6 +51,7 @@ class AuthController extends Controller
      */
     public function actionIndex()
     {
+        // echo 1;die;
         $model = new LoginForm();
         if ($model->load(\Yii::$app->request->post()) && $model->login()) {
             if ($this->isOauthRequest) {
