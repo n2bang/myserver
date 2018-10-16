@@ -24,6 +24,7 @@ class AuthController extends Controller
             ],
         ];
     }
+    
     public function actions()
     {
         return [
@@ -37,12 +38,13 @@ class AuthController extends Controller
              * OPTIONAL
              * Third party oauth providers also can be used.
              */
-            'back' => [
-                'class' => \yii\authclient\AuthAction::className(),
-                'successCallback' => [$this, 'successCallback'],
-            ],
+            // 'back' => [
+            //     'class' => \yii\authclient\AuthAction::className(),
+            //     'successCallback' => [$this, 'successCallback'],
+            // ],
         ];
     }
+
     /**
      * Display login form, signup or something else.
      * AuthClients such as Google also may be used
@@ -62,6 +64,7 @@ class AuthController extends Controller
             ]);
         }
     }
+
     /**
      * OPTIONAL
      * Third party oauth callback sample
@@ -73,7 +76,6 @@ class AuthController extends Controller
             case GoogleOAuth::className():
                 // Do login with automatic signup                
                 break;
-            ...
             default:
                 break;
         }

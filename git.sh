@@ -1,7 +1,7 @@
 #!/bin/bash
 git add .
 
-git commit -am 'add api, auth file'
+git commit -am 'update controller auth'
 
 git pull origin master
 
